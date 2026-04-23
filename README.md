@@ -55,3 +55,24 @@ To provide delicious pizzas using fresh ingredients with excellent service and c
 - ⏰ Peak order time: 12:00 PM – 1:00 PM
 - 💰 Highest revenue category: Classic Category
 - 📊 Most popular size: Large
+
+# **Peak Hour**
+SELECT HOUR(order_time) AS hour, COUNT(*) AS total_orders
+FROM orders
+GROUP BY hour
+ORDER BY total_orders DESC;
+
+# **Highest Revenue Category**
+SELECT pt.category, SUM(od.quantity * p.price) AS revenue
+FROM order_details od
+JOIN pizzas p ON od.pizza_id = p.pizza_id
+JOIN pizza_types pt ON p.pizza_type_id = pt.pizza_type_id
+GROUP BY pt.category
+ORDER BY revenue DESC;
+
+# **Most Popular Size**
+SELECT p.size, SUM(od.quantity) AS total_quantity
+FROM order_details od
+JOIN pizzas p ON od.pizza_id = p.pizza_id
+GROUP BY p.size
+ORDER BY total_quantity DESC;
