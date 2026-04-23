@@ -50,7 +50,7 @@ To provide delicious pizzas using fresh ingredients with excellent service and c
 ### 🏆 Advanced Insights
 - Top 3 pizzas by revenue within each category  
 
-## 📌 Key Insights (Fill these with your results)
+## 📌 Key Insights 
 - 🍕 Best-selling pizza: **Mozzarella Pizza**
 - ⏰ Peak order time: 12:00 PM – 1:00 PM
 - 💰 Highest revenue category: Classic Category
